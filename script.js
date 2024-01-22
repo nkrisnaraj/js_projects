@@ -12,9 +12,9 @@ const body= document.querySelector("body"),
  }
  modeSwitch.addEventListener("click", () =>{
     body.classList.toggle("dark");
-    const isDarkMode = body.classList.contaions("dark");
+    const isDarkMode = body.classList.contaigitns("dark");
     modeSwitch.textContent = isDarkMode ? "Light Mode" : "Dark Mode";
-    localStorage.setItem("mode",isDarkMode?"Dark Mode" : "Light Mode");
+    localStorage.setItem("mode",isDarkMode? "Dark Mode" : "Light Mode");
  });
 const updateTime = () =>{
     //get current times and calculation for degree//
