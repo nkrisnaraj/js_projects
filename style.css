@@ -10,6 +10,7 @@
     --white-color:#fff;
     --black-color:#18191a;
     --red-color:#e74c3c;
+    --day-image:url("nature.jpg");
 
 }
 body{
@@ -24,6 +25,8 @@ body.dark{
     --white-color:#18191a;
     --black-color:#fff;
     --red-color:#e74c3c;
+    --day-image:url("night.jpg");
+
 }
 .container{
     display: flex;
@@ -32,6 +35,21 @@ body.dark{
     
     gap:60px;
 }
+.container .Bg-img{
+    background-image: var(--day-image);
+    background-position: center;
+    background-size:600px 400px;
+    display:flex;
+    height: 400px;
+    width:400px;
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+    opacity: 0.5;
+   
+   
+}
+
 .container .clock{
     display: flex;
     height:400px;
@@ -42,10 +60,11 @@ body.dark{
     background:var(--white-color);
     box-shadow: 0 15px 20px rgba(0,0,0,0.3), 0 25px 30px rgba(0,0,0,0.3);
     position: relative;
+    border: 8px solid var(--black-color);
 }
 .clock label{
     position: absolute;
-    inset: 20px;
+    inset: 15px;
     text-align: center;
     transform: rotate(calc(var(--i)*(360deg/12)));
 }
@@ -53,6 +72,7 @@ body.dark{
     display: inline-block;
     font-size: 30px;
     font-weight: 600;
+    text-shadow: 2px 2px 5px #fff;
     color:var(--black-color);
     transform: rotate(calc(var(--i)*(-360deg/12)));
 }
@@ -94,8 +114,8 @@ body.dark{
 }
 .mode-switch{
     padding: 10px 20px;
-    background:black;
-    color:white;
+    background:var(--black-color);
+    color:var(--white-color);
     display: inline-block;
     border-radius: 15px;
     font-size: 22px;

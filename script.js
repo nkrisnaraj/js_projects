@@ -12,7 +12,7 @@ const body= document.querySelector("body"),
  }
  modeSwitch.addEventListener("click", () =>{
     body.classList.toggle("dark");
-    const isDarkMode = body.classList.contaigitns("dark");
+    const isDarkMode = body.classList.contains("dark");
     modeSwitch.textContent = isDarkMode ? "Light Mode" : "Dark Mode";
     localStorage.setItem("mode",isDarkMode? "Dark Mode" : "Light Mode");
  });
